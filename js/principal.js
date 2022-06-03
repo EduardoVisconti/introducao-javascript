@@ -1,15 +1,36 @@
-const titulo = document.querySelector('.titulo');
-titulo.textContent = 'Aparecida Nutricionista';
+const titulo = document.querySelector('.titulo')
+titulo.textContent = 'Aparecida Nutricionista'
 
-const paciente = document.querySelector("#primeiro-paciente");
+const pacientes = document.querySelectorAll('.paciente')
 
-const tdPeso = paciente.querySelector(".info-peso");
-const peso = tdPeso.textContent; //Pegando o conteúdo dele = 100.
+for (let i = 0; 1 < pacientes.length; i++) {
+  let paciente = pacientes[i]
 
-const tdAltura = paciente.querySelector(".info-altura");
-const altura = tdAltura.textContent;
+  const tdPeso = paciente.querySelector('.info-peso')
+  const peso = tdPeso.textContent //Pegando o conteúdo dele = 100.
 
-const tdImc = paciente.querySelector(".info-imc")
-const imc = peso / (altura * altura);
+  const tdAltura = paciente.querySelector('.info-altura')
+  const altura = tdAltura.textContent
 
-tdImc.textContent = imc;
+  const tdImc = paciente.querySelector('.info-imc')
+
+  let pesoEhValido = true
+  let alturaEhValida = true
+
+  if (peso <= 0 || peso >= 1000) {
+    pesoEhValido = false
+    paciente.classList.add('paciente-invalido')
+  }
+
+  if (altura <= 0 || altura >= 3.0) {
+    alturaEhValida = false
+    tdAltura.textContent = 'Altura inválida!'
+  }
+
+  if (alturaEhValida && pesoEhValido) {
+    const imc = peso / (altura * altura)
+    tdImc.textContent = imc.toFixed(2)
+  } else {
+    tdImc.textContent = 'Altura e/ou peso inválidos!'
+  }
+}
