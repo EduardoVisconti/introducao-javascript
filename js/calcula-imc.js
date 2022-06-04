@@ -28,9 +28,17 @@ for (let i = 0; 1 < pacientes.length; i++) {
   }
 
   if (alturaEhValida && pesoEhValido) {
-    const imc = peso / (altura * altura)
-    tdImc.textContent = imc.toFixed(2)
+    const imc = calculaImc(peso, altura)
+    tdImc.textContent = imc
   } else {
     tdImc.textContent = 'Altura e/ou peso inválidos!'
   }
+}
+
+function calculaImc(peso, altura){
+  let imc = 0;
+
+  imc = peso / (altura * altura)
+
+  return imc.toFixed(2)
 }
