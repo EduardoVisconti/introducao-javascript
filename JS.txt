@@ -1,0 +1,25 @@
+AULA 04
+
+* A diferença entre as funções nomeadas e as funções anônimas
+
+* A escutar eventos do browser com a função addEventListener()
+
+* Que a função criadora de elementos é .createElement()
+
+* A pegar o valor de um input por meio da propriedade .value
+
+* A acessar os input de um form por meio da propriedade .name
+
+* A adicionar elementos na página e dentro de outros elementos com a função appendChild()
+
+-----------
+
+AULA 05
+
+* Dividir o código, separando por funcionalidades do sistema
+
+* Os objetos em Javascript
+
+* A quebrar funções grandes em funções menores ,com cada uma com sua responsabilidade
+
+* A função form.reset() para limpar o formulário
