@@ -23,3 +23,4 @@ AULA 05
 * A quebrar funções grandes em funções menores ,com cada uma com sua responsabilidade
 
 * A função form.reset() para limpar o formulário
+
