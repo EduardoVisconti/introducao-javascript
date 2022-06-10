@@ -30,7 +30,7 @@ for (let i = 0; 1 < pacientes.length; i++) {
   }
 
   if (alturaEhValida && pesoEhValido) {
-    const imc = calculaImc(peso, altura)
+    let imc = calculaImc(peso, altura)
     tdImc.textContent = imc
   } else {
     tdImc.textContent = 'Altura e/ou peso inválidos!'
@@ -46,10 +46,10 @@ function validaPeso() {
 }
 
 function validaAltura() {
-  if(altura >= 0 && altura <= 3.0){
+  if (altura >= 0 && altura <= 3.0){
     return true
   } else {
-    return false;
+    return false
   }
 }
 

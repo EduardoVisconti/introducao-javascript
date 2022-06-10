@@ -11,11 +11,10 @@ botaoAdicionar.addEventListener('click', function (event) {
   //cria a tr e a td do paciente
   const pacienteTr = montaTr(paciente)
 
-  const erro = validaPaciente(paciente)
+  const erros = validaPaciente(paciente)
 
-  if (erro.length > 0) {
-    const mensagemErro = document.querySelector('#mensagem-erro')
-    mensagemErro.textContent = erro
+  if (erros.length > 0) {
+    exibeMensagensDeErro(erros)
     return
   }
 
@@ -26,7 +25,21 @@ botaoAdicionar.addEventListener('click', function (event) {
   tabela.appendChild(pacienteTr)
 
   form.reset() //limpar o form qnd enviar o paciente
+  const mensagensErro = document.querySelector('#mensagens-erro')
+  ul.innerHTML = ''
 })
+
+function exibeMensagensDeErro(erros) {
+  let ul = document.querySelector('#mensagens-erro')
+  ul.innerHTML = '' //controlar o HTML dentro de um elemento. Sempre que exibir uma mensagem de erro ele apaga e mostra as novas.
+
+  erros.forEach(function (erro) {
+    //para cada erro do meu array, executar a função abaixo
+    let li = document.createElement('li') //essa função recebe o erro que está passando e cria uma li preenchendo com o valor do erro e coloca dentra da ul. v
+    li.textContent = erro
+    ul.appendChild(li)
+  })
+}
 
 function obtemPacienteDoFormulario(form) {
   const paciente = {
@@ -76,9 +89,31 @@ function montaTd(dado, classe) {
 }
 
 function validaPaciente(paciente) {
-  if (validaPeso(paciente.peso)) {
-    return '' //se for vdd retorna uma string vazia
-  } else {
-    return 'O peso é inválido'
+  const erros = []
+
+  if (paciente.nome.length == 0) {
+    erros.push('O nome não pode ser em branco')
   }
+
+  if (!validaPeso(paciente.peso)) {
+    erros.push('Peso é inválido')
+  }
+
+  if (!validaAltura(paciente.altura)) {
+    erros.push('A Altura é inválida')
+  }
+
+  if (paciente.gordura.length == 0) {
+    erros.push('A gordura não pode ser em branco')
+  }
+
+  if (paciente.peso.length == 0) {
+    erros.push('O peso não pode ser em branco')
+  }
+
+  if (paciente.altura.length == 0) {
+    erros.push('A altura não pode ser em branco')
+  }
+
+  return erros
 }

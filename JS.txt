@@ -24,3 +24,22 @@ AULA 05
 
 * A função form.reset() para limpar o formulário
 
+------------
+
+AULA 06
+
+* loop for:
+
+var nomes = ["Douglas", "Flávio", "Nico", "Rômulo", "Leonardo"];
+
+for (var i = 0; i < nomes.length; i++) {
+    console.log(nomes[i] + " é instrutor da Alura");
+}
+
+* forEach():
+
+nomes.forEach(function(nome) {
+    console.log(nome + " é instrutor da Alura");
+})
+
+
