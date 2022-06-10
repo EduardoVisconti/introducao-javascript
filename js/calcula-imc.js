@@ -7,7 +7,7 @@ for (let i = 0; 1 < pacientes.length; i++) {
   let paciente = pacientes[i]
 
   const tdPeso = paciente.querySelector('.info-peso')
-  const peso = tdPeso.textContent //Pegando o conteúdo dele = 100.
+  const peso = tdPeso.textContent //Pegando o conteúdo dele = peso.
 
   const tdAltura = paciente.querySelector('.info-altura')
   const altura = tdAltura.textContent
@@ -38,7 +38,7 @@ for (let i = 0; 1 < pacientes.length; i++) {
 }
 
 function validaPeso() {
-  if (peso >= 0 && peso < 1000) {
+  if (peso >= 0 && peso <= 100) {
     return true
   } else {
     return false
@@ -46,7 +46,7 @@ function validaPeso() {
 }
 
 function validaAltura() {
-  if (altura >= 0 && altura <= 3.0){
+  if (altura >= 0 && altura <= 3.0) {
     return true
   } else {
     return false
