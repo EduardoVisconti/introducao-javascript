@@ -38,7 +38,7 @@ for (let i = 0; 1 < pacientes.length; i++) {
 }
 
 function validaPeso() {
-  if (peso >= 0 && peso <= 100) {
+  if (peso >= 0 && peso <= 10) {
     return true
   } else {
     return false
@@ -46,7 +46,7 @@ function validaPeso() {
 }
 
 function validaAltura() {
-  if (altura >= 0 && altura <= 3.0) {
+  if (altura >= 0 && altura <= 3.0){
     return true
   } else {
     return false

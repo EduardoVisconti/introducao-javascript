@@ -13,6 +13,7 @@ AULA 04
 * A adicionar elementos na página e dentro de outros elementos com a função appendChild()
 
 -----------
+------------
 
 AULA 05
 
@@ -24,6 +25,7 @@ AULA 05
 
 * A função form.reset() para limpar o formulário
 
+------------
 ------------
 
 AULA 06
@@ -41,5 +43,20 @@ for (var i = 0; i < nomes.length; i++) {
 nomes.forEach(function(nome) {
     console.log(nome + " é instrutor da Alura");
 })
+
+* Mais organização de código, exportando as funções de validação.
+
+* O operador de negação NOT (!)
+
+* Como validar um formulário
+
+* A função push para colocar elementos dentro de um array
+
+* A propriedade innerHTML dos elementos, que foi usada para apagar os itens da <ul>
+
+* O método forEach para percorrer arrays
+
+-------------
+------------
 
 
