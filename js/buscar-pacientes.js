@@ -1,8 +1,6 @@
 const botaoAdicionar = document.querySelector('#buscar-pacientes')
 
 botaoAdicionar.addEventListener('click', function () {
-  console.log('buscando pacientes...')
-
   const xhr = new XMLHttpRequest()
 
   xhr.open('GET', 'https://api-pacientes.herokuapp.com/pacientes')
@@ -20,8 +18,6 @@ botaoAdicionar.addEventListener('click', function () {
         adicionaPacienteNaTabela(paciente)
       })
     } else {
-      console.log(xhr.status)
-      console.log(xhr.responseText)
 
       erroAjax.classList.remove('invisivel')
     }
