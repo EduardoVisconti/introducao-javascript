@@ -8,9 +8,6 @@ botaoAdicionar.addEventListener('click', function (event) {
   //pegando os dados/valores do form
   const paciente = obtemPacienteDoFormulario(form)
 
-  //cria a tr e a td do paciente
-  const pacienteTr = montaTr(paciente)
-
   const erros = validaPaciente(paciente)
 
   if (erros.length > 0) {
@@ -18,16 +15,23 @@ botaoAdicionar.addEventListener('click', function (event) {
     return
   }
 
-  //adicionando o paciente na tabela
-  const tabela = document.querySelector('#tabela-pacientes')
-
-  //trazendo os tr's ^ pra tabela
-  tabela.appendChild(pacienteTr)
+  adicionaPacienteNaTabela(paciente)
 
   form.reset() //limpar o form qnd enviar o paciente
   const mensagensErro = document.querySelector('#mensagens-erro')
   ul.innerHTML = ''
 })
+
+function adicionaPacienteNaTabela(paciente) {
+  //cria a tr e a td do paciente
+  const pacienteTr = montaTr(paciente)
+
+  //adicionando o paciente na tabela
+  const tabela = document.querySelector('#tabela-pacientes')
+
+  //trazendo os tr's ^ pra tabela
+  tabela.appendChild(pacienteTr)
+}
 
 function exibeMensagensDeErro(erros) {
   let ul = document.querySelector('#mensagens-erro')

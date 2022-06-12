@@ -57,6 +57,54 @@ nomes.forEach(function(nome) {
 * O método forEach para percorrer arrays
 
 -------------
-------------
+-------------
 
+AULA 07
 
+* O novo evento de dblclick
+
+* Como os eventos propagam atráves da página
+
+* A delegação de eventos
+
+* Como animar uma remoção com o setTimeout
+
+-------------
+-------------
+
+AULA 08
+
+* O novo evento de input
+
+* O truque de deixar invisível adicionando uma classe com display:none
+
+* Como realizar uma busca, escondendo todos os elementos e mostrando apenas aqueles que nos interessam
+
+* Como buscar por apenas um pedaço de uma palavra com as Expressões Regulares em Javascript
+
+-------------
+-------------
+
+AULA 09
+
+* O objeto XMLHttpRequest é quem é responsável por fazer requisições HTTP assíncronas com Javascript. Apesar de ter o XML no nome hoje em dia este objeto pode trafegar diversos outros tipos de dados além do XML, este nome só se manteve devido a um legado histórico.
+    
+    - E para instanciar um novo Objeto XMLHttpRequest devemos utilizar a sintaxe com a palavrinha new :
+
+    - var xhr = new XMLHttpRequest();
+
+* Como fazer uma requisição assíncrona com o Javascript
+
+* O objeto XMLHttpRequest
+
+* Como configurar e enviar uma requisição
+
+* O evento de load
+
+* O que é a técnica AJAX.
+
+* O formato JSON
+
+* Como converter JSON para um objeto Javascript com a função JSON.parse()
+
+* Como lidar com erros durante o AJAX
