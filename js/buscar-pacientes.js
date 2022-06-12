@@ -3,7 +3,7 @@ const botaoAdicionar = document.querySelector('#buscar-pacientes')
 botaoAdicionar.addEventListener('click', function () {
   console.log('buscando pacientes...')
 
-  const zhr = new XMLHttpRequest()
+  const xhr = new XMLHttpRequest()
 
   xhr.open('GET', 'https://api-pacientes.herokuapp.com/pacientes')
 
