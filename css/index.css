@@ -140,7 +140,7 @@ button:disabled {
   color: red;
 }
 
-.faceOut {
+.fadeOut {
   opacity: 0;
   transition: 0.5s;
 }
